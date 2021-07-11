@@ -14,5 +14,8 @@
 Route::get('/', function () {
     return view('layouts.home');
 });
+Route::get('/sss', function () {
+    return view('layouts.home');
+});
 
 Route::post('/create/invoice','InvoiceController@store');
