@@ -63,7 +63,6 @@ class InvoiceController extends Controller
                 $record->paypal_id,
             ];
             fputcsv($file, $row);
-            Storage::disk('csv')->put('file.csv', $row);
         }
 
 
