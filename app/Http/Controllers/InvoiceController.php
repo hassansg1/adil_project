@@ -6,6 +6,7 @@ use App\Files;
 use App\Invoice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class InvoiceController extends Controller
 {
@@ -62,7 +63,9 @@ class InvoiceController extends Controller
                 $record->paypal_id,
             ];
             fputcsv($file, $row);
+            Storage::disk('csv')->put('file.csv', $row);
         }
+
 
         $fileEntry = Files::where('name',$fileName)->first();
         if(!$fileEntry)

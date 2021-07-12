@@ -26,3 +26,11 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
+Route::get('files/{file_name}', function($file_name = null)
+{
+    $path = public_path().'/files/'.$file_name;
+    if (file_exists($path)) {
+        return \Illuminate\Support\Facades\Response::download($path);
+    }
+});
+
