@@ -11,11 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.home');
-});
-Route::get('/sss', function () {
-    return view('layouts.home');
+Route::get('/', 'InvoiceController@index');
+Route::post('/create/invoice','InvoiceController@store');
+Auth::routes();
+
+
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/admin', 'AdminController@index');
+    Route::get('/admin/csv', 'AdminController@showFiles');
+    Route::get('/edit/invoice/{id}','InvoiceController@edit');
+    Route::post('/update/invoice/{id}','InvoiceController@update');
+    Route::get('/delete/invoice/{id}','InvoiceController@delete');
+
 });
 
-Route::post('/create/invoice','InvoiceController@store');
