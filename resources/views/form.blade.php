@@ -171,6 +171,9 @@
                                                         <td>
                                                             <label for="invoice_date ">Invoice Date: </label><span
                                                                     class="red"> *</span>
+                                                            <br>
+                                                            Please ensure that our payment terms are 30 working days
+                                                            <br>after the invoice date
                                                         </td>
                                                         <td>
                                                             <input placeholder="Your Answer" class="form-control"
@@ -191,6 +194,7 @@
                                                                 Write N/A if not valid
                                                             </label>
                                                         </td>
+                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <td>
