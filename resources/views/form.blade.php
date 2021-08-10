@@ -172,7 +172,7 @@
                                                             <label for="invoice_date ">Invoice Date: </label><span
                                                                     class="red"> *</span>
                                                             <br>
-                                                            Please ensure that our payment terms are 30 working days
+                                                            Please note that our payment terms are 30 working days
                                                             <br>after the invoice date
                                                         </td>
                                                         <td>
